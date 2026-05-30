@@ -2,8 +2,8 @@ let length;
 let width;
 
 function calculateArea() {
-    lentgh = document.getElementById("length").ariaValueMax;
-    width = document.getElementById("width").ariaValueMax;
+    length = document.getElementById("length").value;
+    width = document.getElementById("width").value;
     let area = length * width;
     document.getElementById("result").innerText = `The area of the rectangle is: ${area}`;
 }
