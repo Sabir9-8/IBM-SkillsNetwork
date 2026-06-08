@@ -1,21 +1,42 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Speed Test Analysis</title>
+    <link rel="stylesheet" href="speed_analysis.css
+    ">
 </head>
+
 <body>
-    <h1>Speed Test Analysis</h1>
+    <div class="card">
+        <div class="header">
+            <div class="header-icon">⌨️</div>
+            <h1>Speed Test Analysis</h1>
+            <span class="badge">WPM</span>
+        </div>
+        <hr class="divider" />
 
-    <label for="inputText">Type the following text:</label><br>
-    <textarea id="inputText" cols="50" rows="5" readonly placeholder="get ready to type..."></textarea><br>
+        <div class="field">
+            <label>Prompt Text</label>
+            <textarea id="inputText" readonly placeholder="Your prompt will appear here…"></textarea>
+        </div>
 
-    <label for="userInput">Your typing:</label><br>
-    <textarea id="userInput"  cols="50" rows="5" placeholder="Start typing when ready"></textarea><br>
-    <button onclick="startTest()">Start Test</button>
-    <button onclick="endTest()">End Test</button>
-    <div id="output"></div>
+        <div class="field">
+            <label>Your Typing</label>
+            <textarea id="userInput" placeholder="Start typing when ready…"></textarea>
+        </div>
+
+        <div class="actions">
+            <button class="btn-start" onclick="startTest()">▶ Start Test</button>
+            <button class="btn-end" onclick="endTest()">■ End Test</button>
+        </div>
+
+        <div id="output"></div>
+    </div>
+
     <script src="speed_analysis.js"></script>
 </body>
+
 </html>
